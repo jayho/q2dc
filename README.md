@@ -12,7 +12,7 @@ link](http://old.r1ch.net/forum/index.php?action=printpage;topic=581.0) for furt
 
 Usage
 -----
-    dm2convert [-f] -o output.dm2 demo.dm2
+    q2dc [-f] -o output.dm2 demo.dm2
 
 (use '-f' to fix MAX_MSGLEN error)
 
