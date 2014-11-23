@@ -41,7 +41,7 @@ int main(int argc, char **argv) {
 	strcpy(gProgname, argv[0]);
 	
 	fprintf(stdout, "\nquake2 demo converter for r1q2 demos\n");
-	fprintf(stdout, "q2dc (c) j. hoffmann, 2005, v0.1\n");
+	fprintf(stdout, "q2dc (c) j. hoffmann, 2005\n");
 	fprintf(stdout, "\n");
 	
 	/* Check, get and set options/names etc... */
@@ -109,13 +109,12 @@ int main(int argc, char **argv) {
 }
 
 void syntax() {
-	fprintf(stderr,"Usage: %s [-h] [-f] [-o output_filename] input_filename\n", gProgname);
+	fprintf(stderr,"Usage: %s [-h] [-f] [-o output.dm2] demo.dm2\n", gProgname);
 	fprintf(stderr,	"\n"
 			"Options:\n" 
-			"  -f     fix block lengths (prevents the MAX_MSGLEN error)\n"
-			"  -o     use 'output_filename'. If omitted, the output filename\n"
-			"         will be the original filename with suffix '_34'\n"
-			"  -h     prints this message...for more info see Readme.txt\n");
+			"  -f     fix block lengths (MAX_MSGLEN error)\n"
+			"  -o     use specified filename as output (if omitted, it will use demo.dm2_34)\n"
+			"  -h     prints usage information, for more info see README.md\n");
 	exit(0);
 }
 

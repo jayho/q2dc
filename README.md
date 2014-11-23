@@ -12,14 +12,17 @@ link](http://old.r1ch.net/forum/index.php?action=printpage;topic=581.0) for furt
 
 Usage
 -----
+    dm2convert [-f] -o output.dm2 demo.dm2
+
+(use '-f' to fix MAX_MSGLEN error)
 
 Caveats
 -------
-1) 'msglen > MAX_MSGLEN': you might see this error when you open a r1q2 demo with an alternative client (nocheat,
-original quake).  Try running it with '-f' to fix this (this breaks big blocks in smaller chunks).
+* 'msglen > MAX_MSGLEN': you might see this error when you open a r1q2 demo with an alternative client (nocheat,
+  original quake).  Try running it with '-f' to fix this (this breaks big blocks in smaller chunks).
 
-2) Demos containing the 'new' packet type 'Compressed Packet' cannot be converted yet (according to R1ch this doesn't
-happen very often)
+* Demos containing the 'new' packet type 'Compressed Packet' cannot be converted yet (according to R1ch this doesn't
+  happen very often)
 
 Bugs
 ----
