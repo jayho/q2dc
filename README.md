@@ -24,6 +24,10 @@ Caveats
 * Demos containing the 'new' packet type 'Compressed Packet' cannot be converted yet (according to R1ch this doesn't
   happen very often)
 
+Why
+---
+It was a fun way to understand a technical spec (DM2 format) and practice a bit of C programming.
+
 Bugs
 ----
 Thanks to R1ch for pointing out a signed/unsigned error that lead to some strange playback behaviour of the converted
