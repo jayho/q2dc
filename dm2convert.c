@@ -52,14 +52,14 @@ int main(int argc, char **argv) {
 	if (openDM2(&f_in, "rb") == 0)
 		die(-1, "Could not open input file");
 	if ((blocks = checkDM2(&f_in)) != 0)
-		fprintf(stderr, "%s: %li blocks\n", f_in.name, blocks);
+		fprintf(stdout, "%s: %li blocks\n", f_in.name, blocks);
 	else
 		die(-1, "Bad DM2 input file format");
-	fprintf(stderr, "Hit RETURN to convert %s -> %s", f_in.name, f_out.name);
+	fprintf(stdout, "Hit RETURN to convert %s -> %s", f_in.name, f_out.name);
 	if (gFixBlocks != 0)
-		fprintf(stderr, " (fix block lengths)");
+		fprintf(stdout, " (fix block lengths)");
 	else
-		fprintf(stderr, " (preserve block lengths)");
+		fprintf(stdout, " (preserve block lengths)");
 	getchar();	
 	if (openDM2(&f_out, "wb") == 0)
 		die(-1, "Could not open output file");
@@ -74,19 +74,19 @@ int main(int argc, char **argv) {
 	/* Final check */
 	openDM2(&f_out, "rb"); 
 	if ((blocks = checkDM2(&f_out)) != 0)
-		fprintf(stderr, "%s: %li frames\n", f_out.name, blocks);
+		fprintf(stdout, "%s: %li frames\n", f_out.name, blocks);
 	else
 		die(-1, "Output file seems to be corrupt");
 
-	fprintf(stderr, "Done");
+	fprintf(stdout, "Done");
 	closeDM2(&f_out);
 
 	exit(0);
 }
 
 void syntax() {
-	fprintf(stderr,"Usage: %s [-h] [-f] [-o output.dm2] input.dm2\n", gProgname);
-	fprintf(stderr,	"\n"
+	fprintf(stdout,"Usage: %s [-h] [-f] [-o output.dm2] input.dm2\n", gProgname);
+	fprintf(stdout,	"\n"
 			"Options:\n" 
 			"  -f     fix block lengths (MAX_MSGLEN error)\n"
 			"  -o     use specified filename as output (if empty: demo.dm2_34)\n"
