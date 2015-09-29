@@ -13,12 +13,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-/*
- * dm2.c
- *
- * See dm2.h for a short description
- */
-
 #include <stdio.h>
 #include <sys/stat.h>
 #include "common.h"
@@ -109,7 +103,7 @@ unsigned long processDM2(DM2FILE_T *f_in, DM2FILE_T *f_out) {
 		/* Read block */
 		if (fread(b_in.data, 1, b_in.size, f_in->handle) != b_in.size) return 0;
 		
-		/* Loop for reading all messages in the current block */
+		/* Read all messages in the current block */
 		while(moreBlockData(&b_in)) {
 			cmd = readByte(&b_in);
 			if (cmd == 0xFF) {
@@ -147,7 +141,7 @@ unsigned long processDM2(DM2FILE_T *f_in, DM2FILE_T *f_out) {
 						return 0;
 					break;
 					
-				case DM2_TEMP_ENTITY: /* This is one ugly mofo */ 
+				case DM2_TEMP_ENTITY:
 					debug("3");
 					entitytype = copyByte(&b_out, &b_in);
 					switch (entitytype) {
@@ -245,7 +239,7 @@ line_entity_1:
     							copyShort(&b_out, &b_in); copyShort(&b_out, &b_in); copyShort(&b_out, &b_in);
     							copyShort(&b_out, &b_in); copyShort(&b_out, &b_in); copyShort(&b_out, &b_in);
   							break;
-  						case DM2_TE_FLAME: /* Quake2 can't parse this! */
+  						case DM2_TE_FLAME:
     							copyShort(&b_out, &b_in);
     							copyShort(&b_out, &b_in);
     							copyShort(&b_out, &b_in); copyShort(&b_out, &b_in); copyShort(&b_out, &b_in);
@@ -284,7 +278,7 @@ line_entity_1:
     							copyShort(&b_out, &b_in);
     							copyShort(&b_out, &b_in); copyShort(&b_out, &b_in); copyShort(&b_out, &b_in);
   							break;
-  						case DM2_TE_RAILTRAIL2: /* senseless, I know */
+  						case DM2_TE_RAILTRAIL2:
   							default:
 							warn("Unknown entitytype in DM2_TEMP_ENTITY");
     							return 0;
@@ -676,5 +670,3 @@ int checkBlock(DM2FILE_T *f, BLOCK_T *b, unsigned long mark) {
 	}
 	return 0;
 }
-
-/* EOF */

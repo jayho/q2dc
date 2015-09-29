@@ -13,13 +13,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-/* 
- * dm2convert.h
- * 
- * Defines some constants and helper functions for the main 
- * program
- */
-
 #ifndef __DM2CONVERT_H
 #define __DM2CONVERT_H
 
@@ -28,7 +21,4 @@ char gProgname[FILENAME_MAX];
 
 void syntax();
 
-#endif
-
-/* EOF */
-
+#endif /* __DM2CONVERT_H */

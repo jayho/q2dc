@@ -13,12 +13,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-/*
- * tools.h
- *
- * Provides some debug/exit etc. helper functions 
- */
-
 #ifndef __TOOLS_H
 #define __TOOLS_H
 
@@ -27,10 +21,9 @@
 */
 
 void die(int errorcode, char *message); 
+
 void warn(char *message);
+
 void debug(char *message);
 
-#endif
-
-/* EOF */
-
+#endif /* __TOOLS_H */

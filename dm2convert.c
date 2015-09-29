@@ -13,14 +13,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-/*
- * dm2convert.c
- *
- * The main file with contains the 'main' function and the main loop 
- * that iterates over blocks in the source demo file, translates them
- * and writes them to the target demo file
- */
-
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -41,7 +33,6 @@ int main(int argc, char **argv) {
 	strcpy(gProgname, argv[0]);
 	
 	fprintf(stdout, "\nquake2 demo converter for r1q2 demos\n");
-	fprintf(stdout, "q2dc (c) j. hoffmann, 2005\n");
 	fprintf(stdout, "\n");
 	
 	/* Check, get and set options/names etc... */
@@ -109,13 +100,11 @@ int main(int argc, char **argv) {
 }
 
 void syntax() {
-	fprintf(stderr,"Usage: %s [-h] [-f] [-o output.dm2] demo.dm2\n", gProgname);
+	fprintf(stderr,"Usage: %s [-h] [-f] [-o output.dm2] input.dm2\n", gProgname);
 	fprintf(stderr,	"\n"
 			"Options:\n" 
 			"  -f     fix block lengths (MAX_MSGLEN error)\n"
-			"  -o     use specified filename as output (if omitted, it will use demo.dm2_34)\n"
-			"  -h     prints usage information, for more info see README.md\n");
+			"  -o     use specified filename as output (if empty: demo.dm2_34)\n"
+			"  -h     prints usage information, see also README.md\n");
 	exit(0);
 }
-
-/* EOF */

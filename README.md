@@ -35,6 +35,6 @@ file.
 Links
 -----
 * The original [forum entry](http://old.r1ch.net/forum/index.php?action=printpage;topic=581.0)
-* Uwe Girlich's [unofficial DM2 format description](http://www.quakewiki.net/archives/demospecs/dm2/) (excellent work!)
+* Uwe Girlich's [unofficial DM2 format description](http://www.quakewiki.net/archives/demospecs/dm2/)
 * [R1CH](http://www.r1ch.net/)'s [protocol 35 description](http://r-1.ch/r1q2-protocol.txt)
 * [R1CH](http://www.r1ch.net/)'s Quake2 client [r1q2](http://www.r1ch.net/stuff/r1q2/)

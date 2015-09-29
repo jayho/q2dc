@@ -13,13 +13,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-/*
- * common.h
- * 
- * Some typedefs etc common to all files
- *
- */
-
 #ifndef __COMMON_H
 #define __COMMON_H
 
@@ -29,7 +22,4 @@
 
 typedef unsigned char BYTE;
 
-#endif
-
-/* EOF */
-
+#endif /* __COMMON_H */

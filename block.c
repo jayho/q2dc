@@ -13,12 +13,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-/*
- * block.c
- *
- * See block.h for a short description
- */
-
 /*#include <stdio.h>*/
 #include "common.h"
 #include "block.h"
@@ -123,6 +117,3 @@ void writeLong(BLOCK_T *b, long l) {
 	writeByte(b, (BYTE)((l>>16)&0xFF));
 	writeByte(b, (BYTE)((l>>24)&0xFF));
 }
-
-/* EOF */
-

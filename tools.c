@@ -13,12 +13,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-/*
- * tools.c
- *
- * See tools.h for a short description
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "tools.h"
@@ -40,5 +34,3 @@ void debug(char *message) {
 #else
 void debug(char *message) {}
 #endif
-	
-/* EOF */

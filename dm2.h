@@ -13,13 +13,6 @@
  * http://www.gnu.org/licenses/.
  */
 
-/*
- * dm2.h
- *
- * Provides many constants etc for fiddling around with the 
- * messages as well as a structure to simplify file handling.
- */ 
-
 #ifndef __DM2_H
 #define __DM2_H
 
@@ -142,14 +135,19 @@ typedef struct {
 } DM2FILE_T;
 
 int openDM2(DM2FILE_T *f, const char *mode);
+
 void closeDM2(DM2FILE_T *f);
+
 unsigned long initDM2(DM2FILE_T *f);
+
 unsigned long checkDM2(DM2FILE_T *f);
+
 unsigned long processDM2(DM2FILE_T *f_in, DM2FILE_T *f_out);
+
 size_t fwriteBlock(DM2FILE_T *f, BLOCK_T *b);
+
 size_t fwritePartialBlock(DM2FILE_T *f, BLOCK_T *b, unsigned long mark);
+
 int checkBlock(DM2FILE_T *f, BLOCK_T *b, unsigned long mark);
 
-#endif
-
-/* EOF */
+#endif /* __DM2_H */
