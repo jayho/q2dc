@@ -3,11 +3,10 @@ q2dc
 
 Quake2 demo converter
 
-This utility converts Quake2 demo files (.dm2) recorded with [R1CHs Enhanced Quake2
-Client](http://www.r1ch.net/stuff/r1q2/) to standard Quake2 demo files. More precisely, it converts demos recorded with
-the new network protocol 35 to ones compatible with the old protocol 34.
+Changes Quake2 demos recorded with [R1CHs Enhanced Quake2
+Client](http://www.r1ch.net/stuff/r1q2/) to make them editable with keygrip2.
 
-Converted demos are usable by clients that do not support protocol 35. In particular, they are editable with keygrip2.
+More precisely, it converts *.dm2 files recorded with network protocol 35 to files compatible with the old protocol 34.
 
 Usage
 -----
@@ -25,12 +24,7 @@ Caveats
 
 Why
 ---
-It was a fun way to understand a technical spec (DM2 format) and practice a bit of C programming.
-
-Bugs
-----
-Thanks to R1ch for pointing out a signed/unsigned error that lead to some strange playback behaviour of the converted
-file.
+Just a fun way to practice a bit of C programming.
 
 Links
 -----
